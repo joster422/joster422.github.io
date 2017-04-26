@@ -1,0 +1,38 @@
+.header {
+    display: flex;
+    padding-bottom: .5em;
+    div,
+    button {
+        flex: 1 0 25%;
+        input {
+            width: 90%;
+        }
+    }
+}
+
+.container {
+    div {
+        display: flex;
+        span {
+            flex: 1 0 auto;
+            text-align: center;
+            padding: 1em 0;
+            margin: .1em;
+            user-select: none;
+        }
+    }
+}
+
+.hidden {
+    background-color: black;
+    cursor: pointer;
+}
+.mark {
+    background-color: red;
+    color: red;
+    cursor: not-allowed;
+}
+
+input {
+    display: block;
+}

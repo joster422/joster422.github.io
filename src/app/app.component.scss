@@ -1,0 +1,30 @@
+
+
+header {
+    display: flex;
+    padding: 5px 15px;
+    background-color: #222;
+    color: #EEE;
+    height: 2.75em;
+
+    span,
+    nav {
+        flex: 1 0;
+    }
+
+    span b {
+        font-size: larger;
+    }
+
+    nav {
+        display: flex;
+
+        a {
+            flex: 1 0;
+            text-align: center;
+            text-decoration: none;
+            padding: .75em;
+            color: #EEE;
+        }
+    }
+}
