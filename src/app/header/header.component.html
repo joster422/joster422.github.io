@@ -1,0 +1,26 @@
+<header>
+  <span class="title">
+    <b>
+      Jacob Osterhout
+    </b>
+    <div>
+      Software Developer
+    </div>
+  </span>
+  <span class="show-large"></span>
+  <nav >
+    <a routerLink="/">
+      Home
+    </a>
+    <a routerLink="/profile">
+      Profile
+    </a>
+    <a (click)="showContact = !showContact" [class.active]="showContact">
+      Contact
+    </a>
+  </nav>
+</header>
+
+<div class="banner"></div>
+
+<jsite-contact *ngIf="showContact"></jsite-contact>

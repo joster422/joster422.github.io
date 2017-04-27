@@ -1,0 +1,45 @@
+$active: #0275d8;
+$inavtive: #d9534f;
+
+.switch {
+    position: relative;
+    display: block;
+    height: 1.5em;
+    width: 50px;
+}
+
+input {
+    display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $inavtive;
+  -webkit-transition: .4s;
+  transition: .4s;
+  &:before {
+    position: absolute;
+    content: "";
+    height: 1em;
+    width: 25px;
+    left: 5px;
+    bottom: .25em;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+}
+
+input:checked + .slider {
+  background-color: $active;
+  &:before {
+    -webkit-transform: translateX(15px);
+    -ms-transform: translateX(15px);
+    transform: translateX(15px);
+  }
+}

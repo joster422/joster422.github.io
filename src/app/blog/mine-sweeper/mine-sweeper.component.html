@@ -11,6 +11,10 @@
     <label>Mines</label>
     <input type="number" min="1" max="99" [(ngModel)]="mines" />
   </div>
+  <div>
+    <label>Bot Player</label>
+    <jsite-toggle [model]="botStatus"></jsite-toggle>
+  </div>
   <button type="button" (click)="start()">
     Start Game
   </button>
