@@ -13,9 +13,9 @@
   </div>
   <div>
     <label>Bot Player</label>
-    <jsite-toggle [model]="botStatus"></jsite-toggle>
+    <jsite-toggle (stateChange)="toggleBot($event)" [model]="botStatus"></jsite-toggle>
   </div>
-  <button type="button" (click)="start()">
+  <button type="button" (click)="startGame()">
     Start Game
   </button>
 </div>

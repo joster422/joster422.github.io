@@ -1,18 +1,21 @@
 import { Component, OnInit } from '@angular/core'
 import { MineSweeperService } from './mine-sweeper.service'
+import { MineSweeperBotService } from './mine-sweeper-bot.service'
 
 @Component({
   selector: 'jsite-mine-sweeper',
-  providers: [MineSweeperService],
+  providers: [MineSweeperService, MineSweeperBotService],
   templateUrl: './mine-sweeper.component.html',
   styleUrls: ['./mine-sweeper.component.scss']
 })
 export class MineSweeperComponent implements OnInit {
-  constructor(private mineSweeperService: MineSweeperService) { }
+  constructor(private mineSweeperService: MineSweeperService, private mineSweeperBotService: MineSweeperBotService) { }
   grid: Cell[][] = []
   rows: number = 10
   columns: number = 10
   mines: number = 20
+  botStatus: boolean = false
+  botInterval: any
   losingPhrases: string[] = [
     'You clicked on a mine',
     'RIP',
@@ -21,7 +24,7 @@ export class MineSweeperComponent implements OnInit {
   ]
 
   ngOnInit() {
-    this.start()
+    this.startGame()
   }
 
   check(cell: Cell) {
@@ -32,6 +35,7 @@ export class MineSweeperComponent implements OnInit {
     if(this.mineSweeperService.checkForMine(cell, this.grid)) {
       let losingPhrase = this.losingPhrases[Math.floor(Math.random() * this.losingPhrases.length)]
       alert(losingPhrase)
+      this.destroyBot()
     }
   }
 
@@ -40,8 +44,35 @@ export class MineSweeperComponent implements OnInit {
     cell.mark = !cell.mark
   }
 
-  start() {
+  startGame() {
     this.grid = this.mineSweeperService.start(this.rows, this.columns, this.mines)
+  }
+  
+  toggleBot(state: boolean) {
+    console.log(state)
+    if(this.botStatus != state && state == true) {
+      this.activateBot()
+    } else {
+      this.destroyBot()
+    }
+    this.botStatus = state
+  }
+
+  activateBot() {
+    this.botInterval = setInterval(() => { 
+      let move = this.mineSweeperBotService.getMove(this.grid)
+      this.check(move)
+    }, 3000)
+  }
+
+  destroyBot() {
+    clearInterval(this.botInterval)
+    this.botInterval = 0
+    this.botStatus = false;
+  }
+
+  changeBotStatus() {
+    this.botStatus = false
   }
 }
 
