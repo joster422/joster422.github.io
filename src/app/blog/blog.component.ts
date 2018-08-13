@@ -22,28 +22,28 @@ export class BlogComponent {
       description: "Restaurant site with flexable layout and google maps"
     },
     {
-      subject: "Event Publisher",
+      subject: "👴 Event Publisher",
       link: "http://joster422.github.io/angularjs-event-publisher/",
       description: "Created for an development competition",
-      tech: "👴 AngularJS 1.3.14"
+      tech: "AngularJS 1.3.14"
     },
     {
-      subject: "Request Form",
+      subject: "👴 Request Form",
       link: "http://joster422.github.io/angularjs-request-form/",
       description: "Created for an development competition",
-      tech: "👴 AngularJS 1.2.32"
+      tech: "AngularJS 1.2.32"
     },
     {
-      subject: "Survey Maker",
+      subject: "👴 Survey Maker",
       link: "http://joster422.github.io/angualrjs-survey-maker/",
       description: "Created for an development competition",
-      tech: "👴 AngularJS 1.2.32"
+      tech: "AngularJS 1.2.32"
     },
     {
-      subject: "Memory Mastery",
+      subject: "👴 Memory Mastery",
       link: "http://joster422.github.io/MM/",
       description: "Like simon says, click and follow the pattern to win",
-      tech: "👴 AngularJS 1.0.6"
+      tech: "AngularJS 1.0.6"
     }
   ];
 
