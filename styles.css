@@ -50,6 +50,7 @@ button,
 
 header,
 footer {
+  text-align: center;
   margin: 1em 0;
 }
 
@@ -60,7 +61,6 @@ footer > div {
 
 footer {
   padding-top: 1em;
-  text-align: center;
 }
 
 header > div:last-child,
@@ -70,8 +70,8 @@ footer > div:last-child {
 
 .card {
   display: grid;
-  grid-template-columns: 11em auto;
-  grid-column-gap: 3em;
+  grid-template-columns: 13em auto;
+  grid-column-gap: 1em;
   margin: 1em;
 }
 .card a {
@@ -79,9 +79,7 @@ footer > div:last-child {
   align-items: center;
   justify-content: center;
 }
-
-a,
-.content {
+.card .content {
   border: 0.25em solid black;
   box-shadow: 0.5em 0.5em 1em black;
   padding: 0.5em;

@@ -68,7 +68,7 @@ footer > div:last-child {
 
 .card {
   display: grid;
-  grid-template-columns: 11em auto;
+  grid-template-columns: 13em auto;
   grid-column-gap: 3em;
   margin: 1em;
 
@@ -77,13 +77,12 @@ footer > div:last-child {
     align-items: center;
     justify-content: center;
   }
-}
 
-a,
-.content {
-  border: 0.25em solid black;
-  box-shadow: 0.5em 0.5em 1em black;
-  padding: 0.5em;
+  .content {
+    border: 0.25em solid black;
+    box-shadow: 0.5em 0.5em 1em black;
+    padding: 0.5em;
+  }
 }
 
 @media (min-width: 576px) {
