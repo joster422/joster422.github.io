@@ -1,0 +1,37 @@
+header,
+footer {
+  margin: 1em 0;
+}
+
+header > div,
+footer > div {
+  margin-bottom: 1em;
+}
+
+footer {
+  padding-top: 1em;
+  text-align: center;
+}
+
+header > div:last-child,
+footer > div:last-child {
+  margin-bottom: 0;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 3em auto;
+  grid-column-gap: 3em;
+  margin: 1em;
+}
+
+a {
+  text-align: center;
+}
+
+a,
+.content {
+  border: 0.25em solid black;
+  box-shadow: 0.5em 0.5em 1em black;
+  padding: 0.5em;
+}
