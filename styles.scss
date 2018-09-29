@@ -1,88 +1,85 @@
 body {
-  padding: 0;
+  padding: 0 0.5em;
   margin: 0;
   margin-right: auto;
   margin-left: auto;
   font-family: Arial;
+  background-color: #fff;
+  &::-webkit-scrollbar {
+    width: 1em;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: #fff;
+  }
+  &::-webkit-scrollbar-thumb {
+    border: 0.25em double #111;
+    background-color: #fff;
+  }
 }
 
 .btn-group {
   display: inline-block;
-  a,
-  button {
+  a {
     margin-right: 1em;
   }
-  a:last-child,
-  button:last-child {
+  a:last-child {
     margin-right: 0;
   }
 }
 
-a,
-button {
+a {
   display: inline-block;
   padding: 0.5em 1em;
-  border: 0;
-  margin: 0;
   text-decoration: none;
   user-select: none;
   cursor: pointer;
-
   transition: transform 0.5s ease-in-out;
   &:hover {
     transform: scale(1.05);
   }
+  &:link {
+    border: 0.25em double #1a0dab;
+    color: #1a0dab;
+  }
+  &:visited {
+    border: 0.25em double #609;
+    color: #609;
+  }
 }
-a,
-.btn-group > a {
-  border: 0.25em double blue;
-  background: white;
-  color: black;
-}
-button,
-.btn-group > button {
-  border: 0.25em solid black;
-  background: white;
-  color: black;
+
+small {
+  color: #006621;
 }
 
 header,
 footer {
-  margin: 1em 0;
-}
-
-header > div,
-footer > div {
   margin-bottom: 1em;
-}
-
-footer {
-  padding-top: 1em;
+  padding: 1em 0;
   text-align: center;
-}
-
-header > div:last-child,
-footer > div:last-child {
-  margin-bottom: 0;
+  div {
+    margin-bottom: 1em;
+  }
+  div:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .card {
   display: grid;
   grid-template-columns: 13em auto;
-  grid-column-gap: 3em;
-  margin: 1em;
-
+  grid-column-gap: 1em;
+  margin-bottom: 1em;
   a {
     display: flex;
     align-items: center;
     justify-content: center;
   }
+}
 
-  .content {
-    border: 0.25em solid black;
-    box-shadow: 0.5em 0.5em 1em black;
-    padding: 0.5em;
-  }
+.content {
+  border: 0.25em solid #111;
+  box-shadow: 0.5em 0.5em 1em #111;
+  padding: 0.5em;
 }
 
 @media (min-width: 576px) {
@@ -104,15 +101,4 @@ footer > div:last-child {
   body {
     max-width: 1140px;
   }
-}
-
-body::-webkit-scrollbar {
-  width: 1em;
-}
-body::-webkit-scrollbar-track {
-  background-color: white;
-}
-body::-webkit-scrollbar-thumb {
-  border: 0.25em double black;
-  background-color: white;
 }
