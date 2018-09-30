@@ -17,20 +17,16 @@ body::-webkit-scrollbar-thumb {
   border: 0.25em double #111;
   background-color: #fff;
 }
-@media (min-width: 768px) {
-  body {
-    font-size: 2vw;
-  }
-}
 @media (min-width: 992px) {
   body {
-    margin: 1em auto;
+    font-size: 2vw;
     max-width: 960px;
+    margin: 1em auto;
   }
 }
 @media (min-width: 1200px) {
   body {
-    font-size: inherit;
+    font-size: 1vw;
     max-width: 1140px;
   }
 }

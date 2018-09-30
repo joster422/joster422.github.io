@@ -17,15 +17,14 @@ body {
     background-color: #fff;
   }
 
-  @media (min-width: 768px) {
-    font-size: 2vw;
-  }
   @media (min-width: 992px) {
-    margin: 1em auto;
+    font-size: 2vw;
+
     max-width: 960px;
+    margin: 1em auto;
   }
   @media (min-width: 1200px) {
-    font-size: inherit;
+    font-size: 1vw;
     max-width: 1140px;
   }
 }
