@@ -77,6 +77,10 @@ footer {
   }
 }
 
+header div {
+  display: inline-block;
+}
+
 .card {
   display: flex;
   margin-bottom: 1em;
@@ -95,4 +99,5 @@ footer {
   border: 0.25em solid #111;
   box-shadow: 0.5em 0.5em 1em #111;
   padding: 0.5em;
+  text-align: left;
 }
