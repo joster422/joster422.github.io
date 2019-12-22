@@ -44,7 +44,8 @@ body {
   }
 }
 
-a {
+.link a,
+.btn-group a {
   display: inline-block;
   padding: 0.5em 1em;
   border-style: double;
